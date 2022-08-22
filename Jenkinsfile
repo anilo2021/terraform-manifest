@@ -9,7 +9,7 @@ pipeline{
                git 'https://github.com/anilo2021/terraform-manifest.git'
             }
     }
-    stages{
+
         stage('terraform init'){
             steps{
                 sh "terraform init"
@@ -18,5 +18,4 @@ pipeline{
         }
 
     }
-  }
 }
