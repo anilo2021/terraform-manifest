@@ -16,6 +16,18 @@ pipeline{
             }
 
         }
+        stage('terraform plan'){
+            steps{
+                sh "terraform plan -var-file="qa.tfvars"
+                
+            }
+        }  
+        stage('terraform apply'){
+            steps{
+                sh "terraform plan -var-file="qa.tfvars --auto-approve"
+                
+            }
+        }      
 
     }
 }
