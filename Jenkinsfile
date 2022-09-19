@@ -4,6 +4,7 @@ pipeline{
        terraform 'terraform-11'
     }
     stages{
+        
         stage('Git Checkout'){
            steps{
                git 'https://github.com/anilo2021/terraform-manifest.git'
